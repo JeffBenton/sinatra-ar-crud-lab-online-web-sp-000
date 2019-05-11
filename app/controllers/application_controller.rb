@@ -36,7 +36,7 @@ class ApplicationController < Sinatra::Base
   end
   
   delete '/articles/:id' do
-    
+    Article.destroy()
     redirect "/articles"
   end
   
