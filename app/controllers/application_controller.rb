@@ -32,7 +32,7 @@ class ApplicationController < Sinatra::Base
   
   patch '/articles/:id' do
     Article.update(params[:id], title: params[:title], content: params[:content])
-    erb :index
+    redirect "/articles/#{params[:id]}"
   end
   
   get '/articles/:id/edit' do
